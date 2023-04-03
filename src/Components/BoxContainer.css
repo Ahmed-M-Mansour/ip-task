@@ -1,0 +1,36 @@
+.panel{
+    background-color: white;
+    width: 80%;
+    border-radius: var(--br-);
+    margin-inline: auto;
+    box-shadow: 2px 2px 13px -6px var(--pc-vdg-);
+    padding: 1rem 1rem;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1200px;
+    z-index: 999;
+}
+
+@media (max-width:899px) {
+    .panel-part+.panel-part{
+        margin-top: 1rem;
+    }    
+}
+
+@media (min-width:900px) {
+    .panel{
+        display: grid;
+        padding: 2rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 2rem;
+        margin-top: -3rem;
+        top: 30%;
+    }
+
+    .panel-part+.panel-part{
+        border-left: 1px solid var(--pc-dg-);
+        padding-left: 1rem;
+    }
+}
